@@ -1,27 +1,37 @@
-﻿<div class="top-row ps-3 navbar navbar-dark">
+﻿
+
+<div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="">ExpenseTrackerApp</a>
+        <a class="navbar-brand" href="/dashboard">ExpenseTrackerApp</a>
     </div>
 </div>
 
 <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
 
 <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    
     <nav class="flex-column">
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="counter">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="weather">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Weather
-            </NavLink>
+            <div class="sidebar">
+                <nav>
+                    <NavLink href="/dashboard" class="nav-link" activeClass="active">
+                        <i class="fas fa-home"></i> Dashboard
+                    </NavLink>
+                    <NavLink href="/cashinflow" class="nav-link" activeClass="active">
+                        <i class="fas fa-arrow-down"></i> Cash Inflow
+                    </NavLink>
+                    <NavLink href="/cashoutflow" class="nav-link" activeClass="active">
+                        <i class="fas fa-arrow-up"></i> Cash Outflow
+                    </NavLink>
+                    <NavLink href="/transactions" class="nav-link" activeClass="active">
+                        <i class="fas fa-exchange-alt"></i> Transactions
+                    </NavLink>
+                    <NavLink href="/debts" class="nav-link" activeClass="active">
+                        <i class="fas fa-credit-card"></i> Debt Management
+                    </NavLink>
+                </nav>
+            </div>
         </div>
     </nav>
 </div>
+
